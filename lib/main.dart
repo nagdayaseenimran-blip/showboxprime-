@@ -15,14 +15,14 @@ class ShowBoxPrimeApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'ShowBox Prime',
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color(0xFF141414), // Netflix Background
+        scaffoldBackgroundColor: const Color(0xFF141414),
         appBarTheme: const AppBarTheme(
           backgroundColor: Color(0xFF000000),
           elevation: 0,
         ),
         bottomNavigationBarTheme: const BottomNavigationBarThemeData(
           backgroundColor: Color(0xFF121212),
-          selectedItemColor: Color(0xFFE50914), // Netflix Red
+          selectedItemColor: Color(0xFFE50914),
           unselectedItemColor: Colors.grey,
           type: BottomNavigationBarType.fixed,
         ),
@@ -76,7 +76,6 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
         titleSpacing: 16,
         title: Row(
           children: [
-            // ShowBox Prime Logo Text
             RichText(
               text: TextSpan(
                 style: GoogleFonts.bebasNeue(
@@ -87,7 +86,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                   TextSpan(
                     text: 'SHOWBOX ',
                     style: TextStyle(
-                      color: Color(0xFFE50914), // Red Accent
+                      color: Color(0xFFE50914),
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -178,7 +177,7 @@ class _SectionWebViewState extends State<SectionWebView> {
         if (_isLoading)
           const Center(
             child: CircularProgressIndicator(
-              color: Color(0xFFE50914), // Netflix Red Loader
+              color: Color(0xFFE50914),
             ),
           ),
       ],
