@@ -29,7 +29,7 @@ jobs:
           channel: 'stable'
 
       - name: Create Android Project Files
-        run: flutter create --platforms=android .
+        run: flutter create --platforms=android --project-name showbox_prime .
 
       - name: Install Dependencies
         run: flutter pub get
