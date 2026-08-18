@@ -31,9 +31,11 @@ jobs:
       - name: Create Android Project Files
         run: flutter create --platforms=android --project-name showbox_prime .
 
-      - name: Add Internet Permission
+      - name: Add Internet Permission & Set MinSdkVersion 21
         run: |
           sed -i '/<application/i \    <uses-permission android:name="android.permission.INTERNET"/>' android/app/src/main/AndroidManifest.xml
+          sed -i 's/minSdkVersion .*/minSdkVersion 21/' android/app/build.gradle || true
+          sed -i 's/flutter.minSdkVersion/21/' android/app/build.gradle || true
 
       - name: Install Dependencies
         run: flutter pub get
@@ -46,4 +48,3 @@ jobs:
         with:
           name: app-release
           path: build/app/outputs/flutter-apk/app-release.apk
-          
