@@ -31,6 +31,10 @@ jobs:
       - name: Create Android Project Files
         run: flutter create --platforms=android --project-name showbox_prime .
 
+      - name: Add Internet Permission
+        run: |
+          sed -i '/<application/i \    <uses-permission android:name="android.permission.INTERNET"/>' android/app/src/main/AndroidManifest.xml
+
       - name: Install Dependencies
         run: flutter pub get
 
